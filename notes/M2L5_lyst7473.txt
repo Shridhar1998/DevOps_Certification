@@ -1,0 +1,75 @@
+9. How to create files in linux OS?
+=> In linux OS we can create files in 3 ways;
+	1. touch
+	2. cat
+	3. vi
+
+9.1 How to create an empty file?
+$ touch <file-name>
+
+9.2 How to create a file with some content inside it?
+$ cat > <file-name>
+It will ask you to enter the data inside the file. Enter some data. 
+Once after writing the data inside the file, to comeout/exit, use "control+d"
+
+Note: If file name is not available, Linux will create that file in the backend and allows us to write the content inside it.
+
+9.3 How to see the content in a specific file?
+$ cat <file-name>
+
+Note: Touch is used to create an empty file.
+	  Cat is used to create a file with some content inside it.
+
+10. How to write the additional content inside an existing file?
+$ cat > <file-name>
+Note: It will delete the old data and will display only the latest data.
+10.1 In real-time, we need to protect the old data, by writing the new data.
+$ cat >> <file-name>
+
+Note: If you give one > symbol, it will erase the old data and gets replaced with new data.
+	 If you give two >> symbols, it will protect the old data and also allows us to write the new data, as well.
+
+11. How to remove a file?
+$ rm <file-name>
+
+12. If you want to display the list of files based on timestamp (latest to oldest)
+$ ls -lt
+
+13. If you want to display the list of files based on timestamp (oldest to latest)
+$ ls -lr
+
+Note: By default, when we give ls -l, it will print the files in alphabetical order.
+
+14. To print the content of a particular directory
+$ ls -l <directory name>
+
+15. How to remove a directory?
+=> If the directory is empty, we can delete that directory using "rmdir <directory-name>"
+
+=> If the directory is not empty, and if you want to delete the files inside a directory along with the directory itself, then
+rm -r <directory-name>
+
+16. How to rename a file or a directory?
+=> mv command is used to rename a file/directory
+Syntax: mv <name of the file you want to change> <modified name>
+Ex: mv aws.txt devops.txt
+Note: To move the files from one directory to another directory, we can use "mv" command.
+
+17. How to copy the data from one file to another file?
+=> Ex: aws.txt (AWS is having 250+ services)
+		devops.txt
+Syntax: cat <file1 name> > <file2 name>
+Ex: cat aws.txt > devops.txt
+
+Note: If File 2 is not available, it will create the file2 and then copies the content from file 1
+
+18. How to copy the data from 2 files to a third file?
+Syntax: cat <file1> <file2> > <file3>
+
+19. How to create a copy of a file?
+Syntax: cp <file1> <file2>
+Note: "cp" is used only for one file
+	"cat" is used for copying the content from multiple files to a single file
+
+20. How to move a file from one directory to another directory?
+Syntax: mv <path> <path>

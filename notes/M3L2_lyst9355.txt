@@ -1,0 +1,103 @@
+=========================================
+MAVEN
+=========================================
+=> MAVEN is developed by using Java Programming Language.
+
+=> If you want to run/work with Maven, we need to install the Java s/w.
+
+=> Once the Java s/w is installed, java provides us two things;
+	1. JDK - Java Development Kit
+	2. JRE - Java Runtime Environment
+
+=> JDK contains set of tools to develop java programs.
+
+=> JRE contains a platform/environment which is used to run the java programs.
+
+Note: JDK and JRE folders will be available with Java 8 version only.
+
+=> If you are a developer, you have to install both JDK and JRE.
+
+=> In client system, only JRE is required.
+
+Download & Install Java Software:
+------------------------------------------------
+~ In order to download the Java Software, we need to create an account in Oracle Website.
+
+~ Weblink: https://www.oracle.com/java/technologies/downloads/#jdk21-windows
+
+Configuration of Java Software:
+------------------------------------------------
+~ After installation of Java Software, we have to set JAVA_HOME in environment variables.
+
+~ The variables which are used by our PC are called environment variables.
+
+~ Two types of environment variables: 1. User Variables 2. System Variables
+
+Setting up the JAVA_HOME page for system variables:
+------------------------------------------------------------------------------
+~ C Drive - Program Files - Java - jdk - Copy the jdk folder path - In the search box of PC, type "Environment" and select 'Edit System Environment Varibles' - A dialogue box will open - Advanced - Environment Variables - A dialogue box will open - System Variables - New - A dialogue box will open - Variable Name: JAVA_HOME, Variable Value: <Paste the path of jdk folder> - OK - OK - OK.
+
+Setting up the path for Java:
+------------------------------------------
+~ C Drive - Program Files - Java - jdk - bin - Copy the bin folder path - In the search box of PC, type Environment and select 'Edit System Environment Varibles' - A dialogue box will open - Advanced - Environment Variables - A dialogue box will open - System Variables - Select the "path" - Edit - New - Paste the path - OK - OK - OK.
+
+How to check whether java is working or not:
+----------------------------------------------------------------
+~ Open Command Prompt ----> java -version ----> You should see the Java Version Number/Id
+
+How to download Maven from Apache Website:
+--------------------------------------------------------------------
+~ Google  ----> Download apache maven (https://maven.apache.org/download.cgi) ----> "Binary Zip Archive" and click on the link next to it  ----> The file gets downloaded in the Zip format  ----> Extract the zip file  ----> Copy the folder ----> Paste the folder in the C Drive
+
+Configuration of Maven Software:
+------------------------------------------------
+
+Setting up the MAVEN_HOME in system environment variables:
+---------------------------------------------------------------------------------------------
+~ C Drive - Paste the extracted zip folder in C Drive -  Apache Maven folder - Copy the folder path - In the search box of PC, type Environment and select 'Edit System Environment Varibles' - A dialogue box will open - Advanced - Environment Variables - A dialogue box will open - System Variables - New - Variable Name: MAVEN_HOME, Variable Value: Paste the path of maven folder - OK - OK - OK.
+
+Setting up the path for Maven:
+------------------------------------------
+~ C Drive - Apache folder - Bin Folder - Copy the bin folder path - In the search box of PC, type Environment and select 'Edit System Environment Varibles' - A dialogue box will open - Advanced- Environment Variables - A dialogue box will open - System Variables - Select the "path" - Edit - New - Paste the path - OK - OK - OK.
+
+How to check whether Maven is working or not:
+----------------------------------------------------------------
+~ Open Command Prompt ----> mvn -version ----> You should see the Maven Version Number/Id
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+Linux Commands:
+------------------------------
+=> In Linux, everything will be represented as a file
+	1. Normal files (Text files)
+	2. Directories (Folders)
+		Movies ----> .mp4 files
+		Linux Files ----> Word files, pdf files....
+
+1. How to create a directory?
+$ mkdir <directory name>
+	Ex: mkdir kastro, mkdir linux....
+
+2. How to see whether a directory or a file is created or not?
+$ ls -l (or) ls (or) ll
+
+3. How to remove/delete a directory?
+$ rmdir <directory name>
+$ rmdir <directory-1-name> <directory-2-name> <directory-3-name> ---> It will delete 3 directories at the same time.
+
+4.How many types of users are available in Linux OS, by default?
+$ In linux OS we will have 2 types of users;
+	1. ec2-user (ec2-user will have limited permissions - softwares cannot be installed)
+	2. root user (root user will have all kinds of privelages - softwares can be installed )
+
+5. How to know what type of user we are currently?
+$ whoami
+
+6. How to know the path of currently working area?
+$ pwd (Present Working Directory)
+
+6.1. How to switch from root user to ec2-user?
+$ sudo su - ec2-user
+
+7. How to go backwards in linux OS?
+$ cd .. (One step backward)
+$ cd ../.. (Two steps backward)
+$ cd ../../.. (Three steps backward)
+
+8. How to go inside a specific directory in linux OS?
+$ cd <directory name>

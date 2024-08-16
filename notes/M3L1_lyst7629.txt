@@ -1,0 +1,97 @@
+==============
+MAVEN 
+==============
+
+Build tools: Maven, Ant, Gradle...
+
+=> Maven is a build tool that is used to create the initial project folder structure in order to develop the application.
+
+=> In the project, developers will write the source code, that source code should be compiled for execution, that compilation of project we will do using MAVEN.
+
+=> Using Maven, we can do project creation, download the dependencies required for the project, unit test execution, and packaging the code.
+
+=> Maven is a free and open-source s/w given by Apache organization.
+
+=> Maven is developed using Java Programming Language.
+
+=> Maven is also called as Java Build Tool.
+
+-----------------------
+Uses of Maven:
+-----------------------
+1. Using Maven we can create initial project folder structure.
+
+2. Using Maven we can download the project dependencies.
+2.1 Lets say i want to develop a mobile application (BookMyShow) using Java. Here what we need to understand is, just by using Java, we cannot fully develop the project. We might have to use frameworks such as Spring, SpringBoot, RestAPIs, Hybernate, JAP, MicroServices. These additional tools are called as "Dependencies." Earlier developers used to download all these dependencies individually from their respective websites. But now we can use Maven to download all these dependencies required for a project.
+2.2. The question is how maven will understand what are the dependencies required for a project?
+In maven project, there will be a file called as "pom.xml" file, which is an input file for the maven.  Inside the pom.xml file we are going to configure what are the dependencies maven has to download.
+2.3. POM - Project Object Model
+2.4. Whenever we create a project folder structure using Maven automatically maven creates the pom.xml file.
+2.5. Whatever communication that you want to do with Maven, we have to communicate only through pom.xml file.
+
+3. Using Maven, we can compile the project source code.
+3.1. When we are writing a code related to an app. In Java the file will be saved with an extension as ".java" (Demo.java). The code which is available in this file is called as Source Code. Our ultimate goal in writing the java program is to execute it in a computer. But here when i just write a java program will it create an output? NO. Here what we need to do is, this java program should be compiled. Here, whenever we compile the source code, it will generate the byte code in a new file. This new file will have an extension as ".class" 
+Demo.java -------> Demo.class
+3.2. The process of converting the .java file to .class file is called as Compilation. As a devops engineer, we have to do the compilation. Java compiler will do the compilation.
+3.3. Whenever we want to execute a java program, that execution shall be done by using a Virtual Machine in Java, which is called as Java Virtual Machine (JVM). This JVM will provide the necessary output as per the source code.
+
+4. Lets assume that my project is having 1000 .java files. Now,compiling all these 1000 .java files will be a troublesome work.
+4.1. We can  package the java project as a jar or war file using Maven.
+	jar - Java Archive
+	war - Web Archive
+4.2 Standalone java applications will be executed using jar files.
+4.3 Java web application will be executed using war files.
+4.4. Once we do the compilation of 1000 .java files, as many as 1000 .class files will get created. Since we cannot give the source code to the client, we will package the .class files as a jar or war file based on the type of application. This jar or war file will be deployed into the webserver (Tomcat). The process of keeping the jar or war file into the web server is known as DEPLOYMENT. Then JVM will execute inorder to get the output.
+4.5. Compiling the source code and packaging it is called as Build Activity.
+4.6. Standalone java applications - The s/w which is specific to one computer is called as "Standalone Applications." - jar files.
+4.7. Java web applications - war file.
+
+
+
+Sample Code
+--------------------
+public class Demo {
+    public static void main(String[] args) {
+        System.out.println("Welcome to Maven Classes by Kastro");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,103 @@
+27.1. SED Command (Stream Editor)
+=> This command is used to replace a word with another word.
+=> Using SED command we can replace the text without opening the file.
+
+$ sed 's/<Word You want to Replace>/<Latest Word>/' <FileName>
+If you execute the above command, the original will not modified, but only the front end of the file gets modified.
+
+$ sed -i 's/<Word You want to Replace>/<Latest Word>/' <FileName>
+If you execute the above command, the original will get modified, both in the frontend and backend.
+
+27.2. Using SED command, without opening a file, we can delete a particular line.
+
+$ sed '4d' <FileName>
+If you execute the above command, the original will not get modified, but only the front end of the file gets modified.
+
+$ sed -i '4d' <FileName>
+If you execute the above command, the original will get modified, both in the frontend and backend.
+
+27.3. To delete the last line in a file
+$ sed '$d' <FileName>
+
+27.4. To delete the lines from a specific line number
+$ sed '10,$d' <FileName>
+
+28. File persmissions in Linux
+=> Linux is multi user based OS.
+=> There are 3 types of file permissions available in Linux OS;
+	1. Read (r)
+	2. Write (w)
+	3. Execute (x)
+
+29. How to identify whether a particular one is a file or a directory?
+=> Once you execute the 'ls -l' command,
+	29.1. If the line is starting with 'd' then it is a directory.
+	29.2. If the line is starting with '-' then it is a file.
+
+30. Usually the file permissions have 3 blocks
+rwx | rwx | rwx
+rwx | rwx | r-x
+
+A file persmission is divided into 3 sections
+1. User permission (u)
+2. Group permission (g)
+3. Others permission (o)
+
+rw-rw-r-- ===>File.txt
+Add a permission ===> +
+Remove a permission ====> -
+rwxrwxrwx
+
+rw- | rw- | r--
+First 3 characters represent the user permissions (rw-)
+Second 3 characters represent the group permissions (rw-)
+Third 3 characters represent the others permissions (r--)
+
+31. How to modify the file permissions?
+=> 'chmod' is used to modify the file permissions
+rw- | rw- | r--
+$ chmod u+x <FileName>
+rwx | rw-r--
+
+$ chmod g+x <FileName>
+rwx | rwx | r--
+
+$ chmod u+rw <FileName>
+
+$ chmod u-r <FileName>
+$ chmod u-rwx <FileName>
+
+Note: + symbol is used to add the permission and - symbol is used to remove the permissions.
+
+32. Adding file permissions using numbers
+$ chmod 777 <FileName>
+The above command will add all the 3 file permissions for all the 3 sections (User, Group, and Others)
+
+File permissions from numerics:
+0 - No permission
+1 - Only Execute permission
+2 - Only Write permission
+3 - Execute and Write permission
+4 - Only Read permission
+5 - Read and Execute permission
+6 - Read and Write permission
+7 - Read, Write and Execute permission
+
+----------------
+Practice:
+----------------
+Q) chmod 6 <FileName>
+Q) chmod 520 <FileName>
+Q) chmod 666 <FileName>
+Q) chmod 21 <FileName>
+Q) chmod 37 <FileName>
+Q) chmod 4 <FileName>
+Q) chmod 1 <FileName>
+
+Note: 
+When you give all the 3 numbers, premissions will be changed from LEFT to RIGHT
+When you give 1 or 2 numbers, premissions will be changed from RIGHT to LEFT
+
+33. Package managers
+yum --- Package manager
+If you want to install a s/w, make sure you are the root user
