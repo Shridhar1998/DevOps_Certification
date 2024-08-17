@@ -1,0 +1,72 @@
+=========================================
+MAVEN
+=========================================
+----------------------------------------------------------------
+How to create a standalone application using Maven
+----------------------------------------------------------------
+mvn archetype:generate -DgroupId=in.InternshipStudio -DartifactId=01-Maven-SA-App -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+=> Now,  we have created a standalone application. This means, .java file(s) is available with us. 
+
+=> In realtime, this .java file will be provided by the developers.
+
+=> As a DevOps Engineer, our duty is to package the code as a jar or war file.
+
+=> After packaging the code, we have to deploy the app in a web server (Tomcat)
+
+---------------------------------------------------------------------------------
+How maven will download these dependencies in the backend?
+---------------------------------------------------------------------------------
+MAVEN REPOSITORIES
+=> Maven will download any dependency using a concept called repository.
+=> In Maven, we have 3 types of repositories:
+	1. Central Repo. - Apache Organisation
+	2. Remote Repo. - Individual company (JFROG)
+	3. Local Repo. - Our PC (.m2 folder)
+
+-----------------------------
+MAVEN GOALS
+-----------------------------
+=> In order to package the code as a jar or war file, we need to understand maven goals.
+
+=> Goals are nothing but commands.
+
+=> Maven goals are used to perform project build activities (conversion of .java files into .class files ---> Package the .class files)
+
+=> The commonly available maven goals are 
+	1) Clean - If you want to delete the old .java files and create a new .java files, then we will use Clean goal.
+				Syntax: mvn clean
+	2) Compile - To compile the project.
+				Syntax: mvn compile
+	3) Test - This goal is used to excute unit test code of our application.
+				Syntax: mvn test
+	4) Package - This goal is used to package the project as a jar or war file.
+				Syntax: mvn package
+	5) Install - This goal is used to install our project as a dependency in the local repository.
+				Syntax: mvn install
+
+=> Multiple maven goals can be executed at a time.
+		Ex: mvn clean compile test
+
+=> To execute maven goals, open the command prompt whereever the pom.xml file is available.
+
+100 .java files --- Build
+101 .java files ---- Delete the old build and then create the new build
+
+============================================
+How to create web application using Maven:
+============================================
+mvn archetype:generate -DarchetypeArtifactId=maven-archetype-webapp -DgroupId=in.InternshipStudio -DartifactId=02-Maven-WebApp -DinteractiveMode=false
+
+_____________________________________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+

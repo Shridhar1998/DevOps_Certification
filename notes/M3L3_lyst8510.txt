@@ -1,0 +1,40 @@
+=========================================
+MAVEN
+=========================================
+Maven Terminology:
+-------------------------------
+Ex: IBM ---> Project (Hotstar) ---> Java ---> Code ---> hotstar.java (Source Code) ---> Compilation (Java Compiler) ---> hotstar.class ---> JVM ---> Output
+
+=> Archetype: It represents what type of project we are going to create.
+It refers to a project template that you can use to quickly set up new projects. It essentially acts as a blueprint containing a basic structure and configuration for a specific type of project.
+	1) maven-archetype-quickstart ---> It represents the standalone application creation.
+	2) maven-archetype-webapp ---> It represents the web application creation.
+		There are 100+ types of architypes 
+
+=> group ID: It represents the company name or a project name.
+Hotstar
+Ex: IBM-Hotstar
+
+=> Artifact ID: It represents the project name or project module name.
+Hotstar (movies, cricket,...) ---> Movies, Cricket...
+DevOps ---> Introduction to DevOps, Linux, Maven....
+An artifact refers to any file that can be downloaded, installed, or deployed during the build process. It's essentially a piece of code or resource that your project either uses or produces.
+PhonePe ---> Transactions, Recharge, Tickets, Bills...
+Ex: PhonePe-Transactions
+
+=> Packaging: It represents how you want to package your application i.e either war file or jar file.
+Standalone App ---> Jar file (multiple .class files will be available)
+Web App ---> War file  (multiple .class files will be available)
+
+.java file ----> .class file ----> Execute (JVM) ----> Output
+1000 .java files ----> Package (jar or war) ----> Execute (JVM) ----> Output
+
+----------------------------------------------------------------
+How to create a standalone application using Maven
+----------------------------------------------------------------
+mvn archetype:generate -DgroupId=in.InternshipStudio -DartifactId=01-Maven-SA-App -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+----------------------------------------------------------------
+How to create a web application using Maven
+----------------------------------------------------------------
+mvn archetype:generate -DarchetypeArtifactId=maven-archetype-webapp -DgroupId=in.InternshipStudio -DartifactId=02-Maven-WebApp -DinteractiveMode=false
