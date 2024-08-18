@@ -1,0 +1,33 @@
+Deployment types of applications:
+-----------------------------------------
+1. Manual Deployment - Webserver (Tomcat) - Least preferred
+2. Automated Deployment - Jenkins - Most preferred
+
+Manual deployment of a Web application - Tomcat
+-------------------------------------------------------------
+=> In order to deploy any application, we need a server (EC2 Instance). If we want to deploy a java based web application, for this we need a web sever.
+
+=> The web server which is available to deploy the java based web application is Apache Tomcat.
+
+=> Maven (war file) ----> Deployment (Tomcat) = Deployment process.
+
+=> Developers will write the code ---> The code will be tested by testing team ---> Once we get the approval from Testing team, Developers will keep the code into the GitHub Repository -----> As a DevOps Engineer, we have to take the code from GitHub Repo  ---> Then we need to deploy the code into the Servers (EC2 Instances)
+
+=> For java web applications, we use below servers;
+	1. Apache Tomcat, 2. JBoss, 3. Weblogic, 4. Websphere ....
+
+Manual deployment
+---------------------------
+=> Java web applications will be deployed in the form of war files.
+
+=> Java standalone applications will be deployed in the form of jar files.
+
+=> Here we dont use any physical servers. So here we will use virtual servers (EC2 Instances) provided by the cloud service providers (AWS, GCP, Azure).
+
+=> AWS ----> EC2 ----> Launch an instance (linux) ----> Install Tomcat, Install Java ----> Deploy the war of the app. ----> Access the application (We will see the 'Hello World' sample page).
+
+=> Apache is the name of the organization. Tomcat is the name of the server.
+
+=> Tomcat is an open-source s/w and it is available for FREE.
+
+=> Tomcat server will run on port number 8080.

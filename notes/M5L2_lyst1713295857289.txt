@@ -1,0 +1,28 @@
+How to download the tomcat server into the local system
+----------------------------------------------------------------------
+https://tomcat.apache.org/download-90.cgi
+Click on Tomcat 9 in the downloads section
+
+Folder structure of tomcat server
+-----------------------------------------
+=> BIN (Binaries) - It contains the files to start and stop the tomcat server.
+		(.sh files - are used for linux OS) ----> startup.sh (This is used to start the server), shutdown.sh (This is used to stop the server)
+		(.bat files - are used for window OS) ----> startup.bat (This is used to start the server), shutdown.bat (This is used to stop the server)
+
+=> CONF (Configuration) - It contains configuration files
+			(server.xml ----> To configure the tomcat port number)
+			(tomcat-users.xml ---->  To configure the user details)
+
+=> LIB (Library) - Library folder contains librariers i.e jar files
+
+=> LOGS - It contains the server logs i.e execution details
+
+=> TEMP (Temporary) - It contains the temporary data
+
+=> WEBAPPS - In this folder we will keep the application war files. It is also called as "Deployment" folder.
+
+Process
+--------------
+Developers (Write the code) ----> Push the code repo. ----> Clone the repo. ----> Package the file ----> war file ----> Keep the war file in the webapps folder.
+
+=> We can keep multiple war files in the webapps folder. But it is not suggested.
