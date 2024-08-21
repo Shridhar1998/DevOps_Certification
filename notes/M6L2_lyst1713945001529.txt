@@ -1,0 +1,69 @@
+Installation of Jenkins on EC2 Instance:
+----------------------------------------------------------
+***********
+   Part 1
+***********
+1. Launch and Connect to the Instance using MobaXTerm
+2. Become Root User
+	sudo su
+	cd (You will see only IP of Instance)
+	sudo yum update -y		
+
+
+***********
+   Part 2
+***********
+https://www.jenkins.io/doc/tutorials/tutorial-for-installing-jenkins-on-AWS/
+
+3. Add Jenkins repo. to our YUM repo:
+	sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+4. Import a key-file from Jenkins-CI to enable the installation from package:
+	sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+	
+	sudo yum upgrade
+
+***********
+    Part 3
+***********
+5. Installing Java
+	sudo amazon-linux-extras install java-openjdk11 -y
+
+	java -version
+
+6. Install Jenkins:
+	sudo yum install jenkins -y
+
+7. Lets start, enable, and check the status of Jenkins 
+	sudo systemctl enable jenkins	
+	sudo systemctl start jenkins
+	sudo systemctl status jenkins
+	You should see Active & Running in Green Colour, which means the Jenkins Tool is successfully installed.
+
+Note: 
+To remove jenkins: sudo yum remove jenkins
+
+***********
+   Part 4
+***********
+By default, the Jenkins tool will run on Port No. 8080
+Enable Port No. 8080 for the EC2 Instance inorder to access Jenkins Tool.
+Check Instance ----> Security ----> Click on link below the Security Group ----> Add Rule ----> Custom TCP, Port No. 8080 ----> Save Rules.
+
+Access Jenkins:
+
+	<public ip>:8080
+	cat <Paste the red code visible while accessing jenkins in browser> and execute in MobaXTerm
+	Copy the code visible in MobaXTerm and Paste in Notepad
+		8f39e64834e34e3ba2e6b0ef55695ea0
+			Paste the above code in Jenkins Browser under "Administrative Password"
+	Click on "Install Suggested Plugins"
+	Create First Admin User
+		Provide Username, Password, Full Name, and Email
+	Save and Continue
+	Copy the Jenkins URL and Paste in Notepad
+		http://3.135.249.138:8080/
+	Save and Finish
+	Start Using Jenkins
+		You will see Jenkins Console
+
+From now, we are going to create the JENKINS Jobs

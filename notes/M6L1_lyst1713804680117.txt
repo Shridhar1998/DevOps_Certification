@@ -1,0 +1,73 @@
+JENKINS
+----------------------
+=> Jenkins is an Open-Source automation tool for CI & CD.
+
+=> Jenkins is built on Java-11 software.
+
+=> Jenkins was invented by Kosukha Kawaguchi in Sun Micro Systems in 2004, July.
+
+=> Initial name was Hudson. It is a paid s/w. Later, Oracle brought this software and made this for free of cost.
+
+=> Jenkins will also run on Port No. 8080
+
+=> Plugins
+
+CI & CD Process
+---------------------------
+CI - Continuous Integration
+
+CD - Continuous Delivery/Deployment
+
+Hotstar --- 2007, 2008, 2010, 2015, 2020, 2022, 2024
+
+CI = Continuous Build + Continuous Test
+
+CD ---> Continuous Delivery --->  Deploying the code manually to the Production Environment
+CD ---> Continuous Deployment --->  Deploying the code automatically to the Production Environment
+
+In order to automate the deployment of code into the servers we will use JENKINS tool.
+
+=> In Jenkins we will work with Jobs (Jenkins Jobs)
+
+Ex: Code ---> GitHub ---> Build (Maven) ---> Test ---> Deploy
+
+=> Pipeline: To create CI&CD, we will create Jenkins Pipelines
+
+Pipeline is a step by step execution a particular job
+
+=> Code ---> Build ---> Test ---> Deploy = Pipeline
+
+=> Pipeline is actually a series of events interlinked with eachother.
+
+Environments:
+--------------------
+1. Dev - Developers uses this
+2. QA - Testing team will use this
+3. UAT - Client will use this
+4. Prod - End users will use this
+
+Build and Deployment Process
+---------------------------------------
+1. Take the latest code from Repo.
+2. Compile the source code
+3. Execute the unit testing 
+4. Perform code review
+5. Package the code (war file)
+6. Deploy the war file into the servers (EC2 Instances)
+
+All the above steps can be automated using Jenkins tool.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
