@@ -6,7 +6,6 @@ Installation of Jenkins on EC2 Instance:
 1. Launch and Connect to the Instance using MobaXTerm
 2. Become Root User
 	sudo su
-	cd (You will see only IP of Instance)
 	sudo yum update -y		
 
 
@@ -67,3 +66,14 @@ Access Jenkins:
 		You will see Jenkins Console
 
 From now, we are going to create the JENKINS Jobs
+
+
+
+jenkins project 1
+====================
+ step 1:
+	- start ec2 instance
+	- start jenkins server with port 8080
+step 2:
+	- install git (root user) 
+	- yum install git -y
